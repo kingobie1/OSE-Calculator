@@ -4,24 +4,9 @@ import javax.swing.JPanel;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 
-<<<<<<< Updated upstream
-import calc.controller.ButtonCalculateController;
-import calc.controller.ButtonClearController;
-import calc.controller.ButtonNumController;
-import calc.model.CalcText;
-=======
-import calc.model.OperationType;
->>>>>>> Stashed changes
-
 import javax.swing.JTextField;
-import javax.swing.JButton;
-import javax.swing.JLabel;
-
-import java.awt.Color;
 import java.awt.Font;
 import javax.swing.LayoutStyle.ComponentPlacement;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
 import javax.swing.SwingConstants;
 
 /**
@@ -55,43 +40,19 @@ public class CalcScreen extends JPanel {
 		NumButton numButton7 = new NumButton("7");
 		NumButton numButton8 = new NumButton("8");
 		NumButton numButton9 = new NumButton("9");
-<<<<<<< Updated upstream
-		
-		numButton0.addActionListener(new ButtonNumController(0, txtCalculation));
-		numButton1.addActionListener(new ButtonNumController(1, txtCalculation));
-		numButton2.addActionListener(new ButtonNumController(2, txtCalculation));
-		numButton3.addActionListener(new ButtonNumController(3, txtCalculation));
-		numButton4.addActionListener(new ButtonNumController(4, txtCalculation));
-		numButton5.addActionListener(new ButtonNumController(5, txtCalculation));
-		numButton6.addActionListener(new ButtonNumController(6, txtCalculation));
-		numButton7.addActionListener(new ButtonNumController(7, txtCalculation));
-		numButton8.addActionListener(new ButtonNumController(8, txtCalculation));
-		numButton9.addActionListener(new ButtonNumController(9, txtCalculation));
-=======
 		NumButton numButtonDecimal = new NumButton(".");
->>>>>>> Stashed changes
-		
+
 		CalcButton calculateButton = new CalcButton("=");
 		CalcButton calcButtonDivision = new CalcButton("÷");
 		CalcButton calcButtonMultiplication = new CalcButton("x");
 		CalcButton calcButtonSubtraction = new CalcButton("-");
 		CalcButton calcButtonAddition = new CalcButton("+");
-<<<<<<< Updated upstream
-=======
-		
->>>>>>> Stashed changes
 		CalcButton calcButtonClear = new CalcButton("ac");
 		CalcButton calcButtonBrackL = new CalcButton("(");
 		CalcButton calcButtonBracR = new CalcButton(")");
 		CalcButton calcButtonPercentage = new CalcButton("%");
 		
-<<<<<<< Updated upstream
-		calculateButton.addActionListener(new ButtonCalculateController());
-		calcButtonClear.addActionListener(new ButtonClearController(txtCalculation));
-		
-		
-=======
->>>>>>> Stashed changes
+
 		GroupLayout groupLayout = new GroupLayout(this);
 		groupLayout.setHorizontalGroup(
 			groupLayout.createParallelGroup(Alignment.TRAILING)
