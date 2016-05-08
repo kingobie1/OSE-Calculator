@@ -7,6 +7,11 @@ import calc.model.CalcManager;
 import calc.model.OperationType;
 import calc.view.CalculatorTextView;
 
+/**
+ * Controller that handles the press of an operation button.
+ * @author ObaSewardEvans
+ *
+ */
 public class ControllerButtonOperation implements ActionListener {
 	CalcManager calcManager = CalcManager.getInstance();
 	CalculatorTextView calculatorTextView = CalculatorTextView.getInstance();
