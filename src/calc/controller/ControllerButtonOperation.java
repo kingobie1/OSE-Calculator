@@ -19,15 +19,16 @@ public class ControllerButtonOperation implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		calcManager.setOperationType(type);
-		
-		if (calcManager.isPreCalculation()) {
+		if (calcManager.getOperationCount() == 0 || calcManager.isPostCalculation()) {
+			calcManager.setOperationType(type);
 			calcManager.setFistValue();
-			
-		} else {
-			calcManager.calculate(type);
+			calcManager.incrementCount();
+			calculatorTextView.resetText();
+			calculatorTextView.newValue();
+		} else if (calcManager.getOperationCount() == 1) {
+			calcManager.calculate(calcManager.getOperationType());
+			calcManager.setOperationType(type);
+			calculatorTextView.newValue();
 		}
-		
-		calculatorTextView.resetText();
 	}
 }

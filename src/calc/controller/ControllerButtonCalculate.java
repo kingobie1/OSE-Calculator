@@ -13,6 +13,7 @@ public class ControllerButtonCalculate implements ActionListener{
 	public void actionPerformed(ActionEvent e) {
 		OperationType type = calcManager.getOperationType();
 		calcManager.calculate(type);
+		calcManager.postCalculation();
 	}
 
 }

@@ -16,12 +16,12 @@ import javax.swing.JLabel;
 public class CalculatorTextView extends JPanel {
 	private static CalculatorTextView instance = new CalculatorTextView();
 	JLabel lblText;
+	boolean newVal;
 	
 	/**
 	 * Create the panel.
 	 */
 	private CalculatorTextView() {
-		
 		setBackground(Color.white);
 		setBorder(BorderFactory.createLineBorder(Color.gray));
 		// Currently Does nothing.
@@ -63,8 +63,18 @@ public class CalculatorTextView extends JPanel {
 	}
 	
 	public void addText(String s){
+		if (newVal == true) {
+			this.resetText();
+		}
+		
 		String tempString = lblText.getText();
 		tempString = tempString.concat(s);
 		lblText.setText(tempString);
+		
+		newVal = false;
+	}
+
+	public void newValue() {
+		newVal = true;
 	}
 }
