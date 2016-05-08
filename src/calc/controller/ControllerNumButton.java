@@ -12,15 +12,15 @@ import calc.view.CalculatorTextView;
  */
 public class ControllerNumButton implements ActionListener {
 	CalculatorTextView calculatorTextView = CalculatorTextView.getInstance();
-	int num;
+	String num;
 	
-	public ControllerNumButton(int n) {
+	public ControllerNumButton(String n) {
 		num = n;
 	}
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		calculatorTextView.addText(num + "");
+		calculatorTextView.addText(num);
 	}
 
 }

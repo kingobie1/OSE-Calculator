@@ -44,16 +44,16 @@ public class CalcScreen extends JPanel {
 		NumButton numButton8 = new NumButton("8");
 		NumButton numButton9 = new NumButton("9");
 		
-		numButton0.addActionListener(new ControllerNumButton(0));
-		numButton1.addActionListener(new ControllerNumButton(1));
-		numButton2.addActionListener(new ControllerNumButton(2));
-		numButton3.addActionListener(new ControllerNumButton(3));
-		numButton4.addActionListener(new ControllerNumButton(4));
-		numButton5.addActionListener(new ControllerNumButton(5));
-		numButton6.addActionListener(new ControllerNumButton(6));
-		numButton7.addActionListener(new ControllerNumButton(7));
-		numButton8.addActionListener(new ControllerNumButton(8));
-		numButton9.addActionListener(new ControllerNumButton(9));
+		numButton0.addActionListener(new ControllerNumButton("0"));
+		numButton1.addActionListener(new ControllerNumButton("1"));
+		numButton2.addActionListener(new ControllerNumButton("2"));
+		numButton3.addActionListener(new ControllerNumButton("3"));
+		numButton4.addActionListener(new ControllerNumButton("4"));
+		numButton5.addActionListener(new ControllerNumButton("5"));
+		numButton6.addActionListener(new ControllerNumButton("6"));
+		numButton7.addActionListener(new ControllerNumButton("7"));
+		numButton8.addActionListener(new ControllerNumButton("8"));
+		numButton9.addActionListener(new ControllerNumButton("9"));
 		
 
 		CalcButton calculateButton = new CalcButton("=");
