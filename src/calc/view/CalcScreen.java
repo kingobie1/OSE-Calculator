@@ -5,11 +5,16 @@ import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 
 import javax.swing.JTextField;
+
+import java.awt.Dimension;
 import java.awt.Font;
 import javax.swing.LayoutStyle.ComponentPlacement;
 
+import calc.controller.ControllerButtonCalculate;
 import calc.controller.ControllerButtonClear;
+import calc.controller.ControllerButtonOperation;
 import calc.controller.ControllerNumButton;
+import calc.model.OperationType;
 
 import javax.swing.SwingConstants;
 
@@ -60,10 +65,16 @@ public class CalcScreen extends JPanel {
 		CalcButton calcButtonBrackL = new CalcButton("(");
 		CalcButton calcButtonBracR = new CalcButton(")");
 		CalcButton calcButtonPercentage = new CalcButton("%");
+
+		calculateButton.addActionListener(new ControllerButtonCalculate());
+		calcButtonAddition.addActionListener(new ControllerButtonOperation(OperationType.ADDITION));
+		calcButtonSubtraction.addActionListener(new ControllerButtonOperation(OperationType.SUBTRACTION));
+		calcButtonMultiplication.addActionListener(new ControllerButtonOperation(OperationType.MULTIPLICATION));
+		calcButtonDivision.addActionListener(new ControllerButtonOperation(OperationType.DIVISION));
 		
 		calcButtonClear.addActionListener(new ControllerButtonClear());
 		CalculatorTextView calculatorTextView = CalculatorTextView.getInstance();
-
+		
 		GroupLayout groupLayout = new GroupLayout(this);
 		groupLayout.setHorizontalGroup(
 			groupLayout.createParallelGroup(Alignment.TRAILING)

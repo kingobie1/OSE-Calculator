@@ -1,6 +1,7 @@
 package calc.view;
 
 import java.awt.Color;
+import java.awt.Dimension;
 
 import javax.swing.BorderFactory;
 import javax.swing.JPanel;
@@ -20,9 +21,13 @@ public class CalculatorTextView extends JPanel {
 	 * Create the panel.
 	 */
 	private CalculatorTextView() {
-		setBounds(0, 0, 218, 55);
+		
 		setBackground(Color.white);
 		setBorder(BorderFactory.createLineBorder(Color.gray));
+		// Currently Does nothing.
+		Dimension maximumSize = new Dimension(218, 55);
+		setMaximumSize(maximumSize);
+		setBounds(0, 0, 218, 55);
 		
 		lblText = new JLabel("");
 
