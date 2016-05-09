@@ -9,7 +9,7 @@ import java.awt.Color;
  */
 public class ColorManager {
 	private static ColorManager instance = new ColorManager();
-	ColorMode theme = ColorMode.LIGHT;
+	ColorMode theme = ColorMode.DARK;
 	
 	private ColorManager() {
 		
@@ -44,7 +44,7 @@ public class ColorManager {
 		Color color;
 		switch (type) {
 			case calculateBUTTON:
-				color = Color.decode("0x8f2f29");
+				color = Color.decode("0x2ecc71");
 				break;
 				
 			case numberBUTTON:
@@ -84,7 +84,7 @@ public class ColorManager {
 		Color color;
 		switch (type) {
 			case calculateBUTTON:
-				color = Color.decode("0x8f2f29");
+				color = Color.decode("0xc0392b");
 				break;
 				
 			case numberBUTTON:
