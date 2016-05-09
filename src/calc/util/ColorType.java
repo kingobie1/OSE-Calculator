@@ -1,4 +1,4 @@
-package calc.model;
+package calc.util;
 
 /**
  * Color types for various GUI elements and events/states.

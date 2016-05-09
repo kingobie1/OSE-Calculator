@@ -9,7 +9,7 @@ import calc.controller.ControllerButtonClear;
 import calc.controller.ControllerButtonOperation;
 import calc.controller.ControllerNumButton;
 import calc.model.CalcManager;
-import calc.model.OperationType;
+import calc.util.OperationType;
 import calc.view.CalcButton;
 import calc.view.CalcWindowFrame;
 import calc.view.CalculatorTextView;

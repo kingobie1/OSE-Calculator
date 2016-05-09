@@ -4,7 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import calc.model.CalcManager;
-import calc.model.OperationType;
+import calc.util.OperationType;
 
 /**
  * Have calculator manager calculate on button press.

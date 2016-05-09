@@ -5,8 +5,8 @@ import java.awt.Graphics;
 
 import javax.swing.JButton;
 
-import calc.model.ColorManager;
-import calc.model.ColorType;
+import calc.util.ColorManager;
+import calc.util.ColorType;
 
 /**
  * Buttons that hold the numbers 0-9 and the decimal point.

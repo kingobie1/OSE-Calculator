@@ -10,9 +10,9 @@ import calc.controller.ControllerButtonCalculate;
 import calc.controller.ControllerButtonClear;
 import calc.controller.ControllerButtonOperation;
 import calc.controller.ControllerNumButton;
-import calc.model.ColorManager;
-import calc.model.ColorType;
-import calc.model.OperationType;
+import calc.util.ColorManager;
+import calc.util.ColorType;
+import calc.util.OperationType;
 
 /**
  * Screen that you use to calculate.

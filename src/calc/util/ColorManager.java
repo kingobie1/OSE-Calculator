@@ -1,4 +1,4 @@
-package calc.model;
+package calc.util;
 
 import java.awt.Color;
 
