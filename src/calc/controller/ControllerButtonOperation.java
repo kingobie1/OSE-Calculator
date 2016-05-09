@@ -5,6 +5,8 @@ import java.awt.event.ActionListener;
 
 import calc.model.CalcManager;
 import calc.util.OperationType;
+import calc.util.SoundManager;
+import calc.util.SoundType;
 import calc.view.CalculatorTextView;
 
 /**
@@ -25,6 +27,8 @@ public class ControllerButtonOperation implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if (!calcManager.isValid()) { return; }
+		
+		SoundManager.getInstance().playSound(SoundType.BUTTONSOUND);
 		
 		if (calcManager.getOperationCount() == 0 || calcManager.isPostCalculation()) {
 			calcManager.setOperationType(type);

@@ -3,6 +3,8 @@ package calc.controller;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import calc.util.SoundManager;
+import calc.util.SoundType;
 import calc.view.CalculatorTextView;
 
 /**
@@ -20,6 +22,7 @@ public class ControllerNumButton implements ActionListener {
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {
+		SoundManager.getInstance().playSound(SoundType.BUTTONSOUND);
 		calculatorTextView.addText(num);
 	}
 

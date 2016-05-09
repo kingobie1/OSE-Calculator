@@ -15,7 +15,7 @@ public class CalcManager {
 	boolean isValid = false;
 	
 	boolean isPostCalculation = false; // check if the state is pre or post calculation.
-	double firstValue; // the first value in the calculation.
+	double firstValue = -0 ; // the first value in the calculation.
 	OperationType operationType; // operationType for calculation.
 	int operationCount; // count of the amount of operation presses.
 	
@@ -142,6 +142,14 @@ public class CalcManager {
 	 */
 	public boolean isValid() {
 		if (calculatorTextView.getText().equals("")) {
+			return false;
+		} else {
+			return true;
+		}
+	}
+	
+	public boolean calculationIsValid() {
+		if (firstValue == -0 || calculatorTextView.getDouble() == -0) {
 			return false;
 		} else {
 			return true;

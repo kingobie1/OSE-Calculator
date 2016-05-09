@@ -63,8 +63,20 @@ public class CalculatorTextView extends JPanel {
 	}
 	
 	public double getDouble() {
-		if (lblText.getText() == null) { return 0; }
-		return Double.parseDouble(lblText.getText());
+//		if (lblText.getText() == null || lblText.getText() == "") { return -0; }
+//		return Double.parseDouble(lblText.getText());
+		
+		double d;
+		
+		try {
+		     d = Double.parseDouble(lblText.getText());
+		}
+		catch (NullPointerException | NumberFormatException  e) {
+			System.out.println("could not parse double");
+		     d = -0;
+		}
+		
+		return d;
 	}
 	
 	public void resetText() {
