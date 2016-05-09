@@ -15,6 +15,8 @@ public class ControllerButtonCalculate implements ActionListener{
 	CalcManager calcManager = CalcManager.getInstance();
 	
 	public void actionPerformed(ActionEvent e) {
+		if (!calcManager.isValid()) { return; }
+		
 		OperationType type = calcManager.getOperationType();
 		calcManager.calculate(type);
 		calcManager.postCalculation();

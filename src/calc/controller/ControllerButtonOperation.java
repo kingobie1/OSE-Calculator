@@ -24,6 +24,8 @@ public class ControllerButtonOperation implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
+		if (!calcManager.isValid()) { return; }
+		
 		if (calcManager.getOperationCount() == 0 || calcManager.isPostCalculation()) {
 			calcManager.setOperationType(type);
 			calcManager.setFistValue();
