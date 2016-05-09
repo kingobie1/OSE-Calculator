@@ -39,6 +39,10 @@ public class ColorManager {
 			case textVIEW:
 				color = Color.decode("0x050505");
 				break;
+				
+			case buttonPRESSED:
+				color = Color.BLACK;
+				break;
 	
 			default:
 				color = Color.white;

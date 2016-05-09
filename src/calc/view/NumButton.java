@@ -1,6 +1,7 @@
 package calc.view;
 
 import java.awt.Color;
+import java.awt.Graphics;
 
 import javax.swing.JButton;
 
@@ -16,9 +17,24 @@ public class NumButton extends JButton {
 	ColorManager colorManager = ColorManager.getInstance();
 
 	public NumButton(String text) {
-		setBackground(colorManager.getColor(ColorType.numberBUTTON));
-		setForeground(Color.white);
+		super.setContentAreaFilled(false);
+		setForeground(colorManager.getColor(ColorType.TEXT));
 		setBorderPainted(false);
+		setFocusPainted(false);
 		this.setText(text);
+	}
+	
+	@Override
+	protected void paintComponent(Graphics g) {
+		Color color = colorManager.getColor(ColorType.numberBUTTON);
+		g.setColor(color);
+		
+		if (getModel().isPressed()) {
+			color = colorManager.getColor(ColorType.buttonPRESSED);
+			g.setColor(color);
+		}
+		
+		g.fillRect(0, 0, getWidth(), getHeight());
+		super.paintComponent(g);
 	}
 }
