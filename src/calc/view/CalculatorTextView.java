@@ -1,14 +1,14 @@
 package calc.view;
 
-import java.awt.Color;
 import java.awt.Dimension;
 
-import javax.swing.BorderFactory;
 import javax.swing.JPanel;
-import javax.swing.border.Border;
+
+import calc.model.ColorManager;
+import calc.model.ColorType;
+
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
-import javax.swing.JTextField;
 import java.awt.Font;
 import javax.swing.SwingConstants;
 import javax.swing.JLabel;
@@ -19,6 +19,7 @@ import javax.swing.JLabel;
  *
  */
 public class CalculatorTextView extends JPanel {
+	ColorManager colorManager = ColorManager.getInstance();
 	private static CalculatorTextView instance = new CalculatorTextView();
 	JLabel lblText;
 	boolean newVal;
@@ -27,17 +28,18 @@ public class CalculatorTextView extends JPanel {
 	 * Create the panel.
 	 */
 	private CalculatorTextView() {
-		setBackground(Color.white);
-		setBorder(BorderFactory.createLineBorder(Color.gray));
+		setBackground(colorManager.getColor(ColorType.textVIEW));
+		setBorder(getBorder());
 		// Currently Does nothing.
 		Dimension maximumSize = new Dimension(218, 55);
 		setMaximumSize(maximumSize);
 		setBounds(0, 0, 218, 55);
 		
 		lblText = new JLabel("");
+		lblText.setForeground(colorManager.getColor(ColorType.TEXT));
 
 		lblText.setHorizontalAlignment(SwingConstants.RIGHT);
-		lblText.setFont(new Font(Font.MONOSPACED, Font.PLAIN, 20));
+		lblText.setFont(new Font(Font.MONOSPACED, Font.PLAIN, 24));
 		GroupLayout groupLayout = new GroupLayout(this);
 		groupLayout.setHorizontalGroup(
 			groupLayout.createParallelGroup(Alignment.LEADING)

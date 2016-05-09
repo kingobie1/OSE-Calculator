@@ -1,13 +1,11 @@
 package calc.view;
 
 import java.awt.BorderLayout;
-import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
-import javax.swing.border.EmptyBorder;
 
 /**
  * The window in which the calculator is viewed on.
@@ -23,6 +21,8 @@ public class CalcWindowFrame extends JFrame {
 	 * Create the frame.
 	 */
 	private CalcWindowFrame() {
+		// unable to resize window.
+		setResizable(false);
 		
 		try {
 			UIManager.setLookAndFeel( UIManager.getCrossPlatformLookAndFeelClassName() );
