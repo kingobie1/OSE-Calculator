@@ -98,4 +98,10 @@ public class CalculatorTextView extends JPanel {
 	public void newValue() {
 		newVal = true;
 	}
+	
+	public void refresh(){
+		this.revalidate();
+		setBackground(colorManager.getColor(ColorType.textVIEW));
+		lblText.setForeground(colorManager.getColor(ColorType.TEXT));
+	}
 }

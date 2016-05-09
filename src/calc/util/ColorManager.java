@@ -61,7 +61,6 @@ public class ColorManager {
 				
 			case TEXT:
 				color = Color.decode("0x262626");
-//				color = Color.decode("0x4c4c4c");
 				break;
 				
 			case textVIEW:
@@ -118,6 +117,18 @@ public class ColorManager {
 		}
 		
 		return color;
+	}
+	
+	public void setTheme(ColorMode theme) {
+		this.theme = theme;
+	}
+	
+	public void alternateTheme(){
+		if (this.theme == ColorMode.DARK) {
+			this.theme = ColorMode.LIGHT;
+		} else {
+			this.theme = ColorMode.DARK;
+		}
 	}
 	
 }

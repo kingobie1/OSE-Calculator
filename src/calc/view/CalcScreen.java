@@ -84,6 +84,7 @@ public class CalcScreen extends JPanel {
 		// screen that views the calculation numbers.
 		CalculatorTextView calculatorTextView = CalculatorTextView.getInstance();
 //		JPanel calculatorTextView = new JPanel();
+		calculatorTextView.refresh();
 		
 		GroupLayout groupLayout = new GroupLayout(this);
 		groupLayout.setHorizontalGroup(
