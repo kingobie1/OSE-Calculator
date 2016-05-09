@@ -20,7 +20,7 @@ import javax.swing.SwingConstants;
 
 /**
  * Screen that you use to calculate.
- * @author ObaSewardEvans
+ * @author Obatola Seward-Evans
  *
  */
 public class CalcScreen extends JPanel {
@@ -31,8 +31,7 @@ public class CalcScreen extends JPanel {
 	public CalcScreen() {
 		setBounds(0, 0, 237, 373);
 		
-//		NumButton numButtons[] = new NumButton[9];
-		
+		// initialize number buttons.
 		NumButton numButton0 = new NumButton("0");
 		NumButton numButton1 = new NumButton("1");
 		NumButton numButton2 = new NumButton("2");
@@ -45,6 +44,7 @@ public class CalcScreen extends JPanel {
 		NumButton numButton9 = new NumButton("9");
 		NumButton numButtonDecimal = new NumButton(".");
 		
+		// add controller to number buttons.
 		numButton0.addActionListener(new ControllerNumButton("0"));
 		numButton1.addActionListener(new ControllerNumButton("1"));
 		numButton2.addActionListener(new ControllerNumButton("2"));
@@ -57,7 +57,7 @@ public class CalcScreen extends JPanel {
 		numButton9.addActionListener(new ControllerNumButton("9"));
 		numButtonDecimal.addActionListener(new ControllerNumButton("."));
 		
-
+		// non number buttons.
 		CalcButton calculateButton = new CalcButton("=");
 		CalcButton calcButtonDivision = new CalcButton("÷");
 		CalcButton calcButtonMultiplication = new CalcButton("x");
@@ -71,13 +71,15 @@ public class CalcScreen extends JPanel {
 		CalcButton calcButtonPercentage = new CalcButton("%");
 		calcButtonPercentage.setEnabled(false);
 
+		// add controllers to non number buttons.
 		calculateButton.addActionListener(new ControllerButtonCalculate());
 		calcButtonAddition.addActionListener(new ControllerButtonOperation(OperationType.ADDITION));
 		calcButtonSubtraction.addActionListener(new ControllerButtonOperation(OperationType.SUBTRACTION));
 		calcButtonMultiplication.addActionListener(new ControllerButtonOperation(OperationType.MULTIPLICATION));
 		calcButtonDivision.addActionListener(new ControllerButtonOperation(OperationType.DIVISION));
-		
 		calcButtonClear.addActionListener(new ControllerButtonClear());
+		
+		// screen that views the calculation numbers.
 		CalculatorTextView calculatorTextView = CalculatorTextView.getInstance();
 //		JPanel calculatorTextView = new JPanel();
 		

@@ -16,6 +16,11 @@ import calc.view.CalculatorTextView;
 import calc.view.NumButton;
 import junit.framework.TestCase;
 
+/**
+ * Tests for the calculator
+ * @author ObaSewardEvans
+ *
+ */
 public class testCalculations extends TestCase {
 	String clickType;
 	CalcManager calcManager = CalcManager.getInstance();

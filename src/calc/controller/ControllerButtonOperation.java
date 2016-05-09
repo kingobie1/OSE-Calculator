@@ -9,7 +9,7 @@ import calc.view.CalculatorTextView;
 
 /**
  * Controller that handles the press of an operation button.
- * @author ObaSewardEvans
+ * @author Obatola Seward-Evans
  *
  */
 public class ControllerButtonOperation implements ActionListener {

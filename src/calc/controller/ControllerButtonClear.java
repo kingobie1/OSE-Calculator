@@ -8,7 +8,7 @@ import calc.view.CalculatorTextView;
 
 /**
  * Controller that handles clearing the screen.
- * @author ObaSewardEvans
+ * @author Obatola Seward-Evans
  *
  */
 public class ControllerButtonClear implements ActionListener{

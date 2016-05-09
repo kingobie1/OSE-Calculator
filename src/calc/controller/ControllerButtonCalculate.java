@@ -8,7 +8,7 @@ import calc.model.OperationType;
 
 /**
  * Have calculator manager calculate on button press.
- * @author ObaSewardEvans
+ * @author Obatola Seward-Evans
  *
  */
 public class ControllerButtonCalculate implements ActionListener{

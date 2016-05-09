@@ -2,6 +2,12 @@ import javax.swing.JFrame;
 
 import calc.view.CalcWindowFrame;
 
+
+/**
+ * Class that starts the calculator application.
+ * @author Obatola Seward-Evans
+ *
+ */
 public class Main {
 	static JFrame calcWindowFrame;
 	

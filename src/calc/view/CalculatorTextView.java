@@ -13,6 +13,11 @@ import java.awt.Font;
 import javax.swing.SwingConstants;
 import javax.swing.JLabel;
 
+/**
+ * JPanel that shows the calculator screen (numbers).
+ * @author Obatola Seward-Evans
+ *
+ */
 public class CalculatorTextView extends JPanel {
 	private static CalculatorTextView instance = new CalculatorTextView();
 	JLabel lblText;

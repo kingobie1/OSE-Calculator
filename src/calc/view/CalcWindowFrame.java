@@ -9,6 +9,11 @@ import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 import javax.swing.border.EmptyBorder;
 
+/**
+ * The window in which the calculator is viewed on.
+ * @author Obatola Seward-Evans
+ *
+ */
 public class CalcWindowFrame extends JFrame {
 
 	private static JPanel contentPane;
