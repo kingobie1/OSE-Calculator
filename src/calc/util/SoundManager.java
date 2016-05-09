@@ -107,5 +107,12 @@ public class SoundManager {
     public boolean isMute() {
         return isMute;
     }
+    
+    /**
+     * mute the app.
+     */
+    public void mute() {
+    	isMute = true;
+    }
 
 }

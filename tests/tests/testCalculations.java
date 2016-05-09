@@ -10,6 +10,7 @@ import calc.controller.ControllerButtonOperation;
 import calc.controller.ControllerNumButton;
 import calc.model.CalcManager;
 import calc.util.OperationType;
+import calc.util.SoundManager;
 import calc.view.CalcButton;
 import calc.view.CalcWindowFrame;
 import calc.view.CalculatorTextView;
@@ -40,6 +41,8 @@ public class testCalculations extends TestCase {
 	CalcButton calcButtonClear;
 	
 	public void startUp(){
+		// mute for testing.
+		SoundManager.getInstance().mute();
 		
 		/* *** Initialize Operation Button and Controllers *** */		
 		ControllerButtonOperation addController = new ControllerButtonOperation(OperationType.ADDITION);
