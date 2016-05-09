@@ -21,6 +21,8 @@ public class CalcWindowFrame extends JFrame {
 	 * Create the frame.
 	 */
 	private CalcWindowFrame() {
+		// unable to resize window.
+		setResizable(false);
 		
 		try {
 			UIManager.setLookAndFeel( UIManager.getCrossPlatformLookAndFeelClassName() );
