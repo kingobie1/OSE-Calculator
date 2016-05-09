@@ -4,7 +4,6 @@ import java.awt.Color;
 import java.awt.Graphics;
 
 import javax.swing.JButton;
-import javax.swing.border.EmptyBorder;
 
 import calc.model.ColorManager;
 import calc.model.ColorType;

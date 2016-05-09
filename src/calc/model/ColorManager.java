@@ -2,6 +2,11 @@ package calc.model;
 
 import java.awt.Color;
 
+/**
+ * Manages the colors of all GUI elements.
+ * @author Obatola Seward-Evans
+ *
+ */
 public class ColorManager {
 	private static ColorManager instance = new ColorManager();
 	

@@ -4,11 +4,6 @@ import javax.swing.JPanel;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 
-import javax.swing.JTextField;
-
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Font;
 import javax.swing.LayoutStyle.ComponentPlacement;
 
 import calc.controller.ControllerButtonCalculate;
@@ -18,8 +13,6 @@ import calc.controller.ControllerNumButton;
 import calc.model.ColorManager;
 import calc.model.ColorType;
 import calc.model.OperationType;
-
-import javax.swing.SwingConstants;
 
 /**
  * Screen that you use to calculate.
