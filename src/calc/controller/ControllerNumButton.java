@@ -7,7 +7,7 @@ import calc.view.CalculatorTextView;
 
 /**
  * Controller that handles the press of a number button.
- * @author ObaSewardEvans
+ * @author Obatola Seward-Evans
  *
  */
 public class ControllerNumButton implements ActionListener {

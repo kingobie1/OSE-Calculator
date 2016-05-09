@@ -20,7 +20,7 @@ import javax.swing.SwingConstants;
 
 /**
  * Screen that you use to calculate.
- * @author ObaSewardEvans
+ * @author Obatola Seward-Evans
  *
  */
 public class CalcScreen extends JPanel {

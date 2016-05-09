@@ -7,7 +7,7 @@ import javax.swing.JButton;
 /**
  * Buttons on the calculator screen.
  * used for non number buttons.
- * @author ObaSewardEvans
+ * @author Obatola Seward-Evans
  *
  */
 public class CalcButton extends JButton {

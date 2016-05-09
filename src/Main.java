@@ -5,7 +5,7 @@ import calc.view.CalcWindowFrame;
 
 /**
  * Class that starts the calculator application.
- * @author ObaSewardEvans
+ * @author Obatola Seward-Evans
  *
  */
 public class Main {

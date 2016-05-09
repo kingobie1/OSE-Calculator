@@ -6,7 +6,7 @@ import javax.swing.JButton;
 
 /**
  * Buttons that hold the numbers 0-9 and the decimal point.
- * @author ObaSewardEvans
+ * @author Obatola Seward-Evans
  *
  */
 public class NumButton extends JButton {

@@ -15,7 +15,7 @@ import javax.swing.JLabel;
 
 /**
  * JPanel that shows the calculator screen (numbers).
- * @author ObaSewardEvans
+ * @author Obatola Seward-Evans
  *
  */
 public class CalculatorTextView extends JPanel {

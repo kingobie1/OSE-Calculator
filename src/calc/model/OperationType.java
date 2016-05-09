@@ -2,7 +2,7 @@ package calc.model;
 
 /**
  * the types of operations that can be made.
- * @author ObaSewardEvans
+ * @author Obatola Seward-Evans
  *
  */
 public enum OperationType {

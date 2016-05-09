@@ -11,7 +11,7 @@ import javax.swing.border.EmptyBorder;
 
 /**
  * The window in which the calculator is viewed on.
- * @author ObaSewardEvans
+ * @author Obatola Seward-Evans
  *
  */
 public class CalcWindowFrame extends JFrame {

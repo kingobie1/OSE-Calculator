@@ -7,7 +7,7 @@ import calc.view.CalculatorTextView;
 /**
  * Handles all calculatoions.
  * is a singleton.
- * @author ObaSewardEvans
+ * @author Obatola Seward-Evans
  *
  */
 public class CalcManager {
