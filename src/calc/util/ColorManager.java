@@ -9,6 +9,7 @@ import java.awt.Color;
  */
 public class ColorManager {
 	private static ColorManager instance = new ColorManager();
+	ColorMode theme = ColorMode.LIGHT;
 	
 	private ColorManager() {
 		
@@ -19,6 +20,68 @@ public class ColorManager {
 	}
 	
 	public Color getColor(ColorType type){
+		Color color;
+		
+		switch (theme) {
+			case LIGHT:
+				color = getLightColor(type);
+				break;
+				
+			case DARK:
+				color = getDarkColor(type);
+				break;	
+	
+			default:
+				color = getDarkColor(type);
+				break;
+		}
+		
+		return color;
+	}
+	
+	/* * * * LIGHT THEME * * * */
+	public Color getLightColor(ColorType type){
+		Color color;
+		switch (type) {
+			case calculateBUTTON:
+				color = Color.decode("0x8f2f29");
+				break;
+				
+			case numberBUTTON:
+				color = Color.decode("0xffffff");
+				break;
+				
+			case operationBUTTON:
+				color = Color.decode("0xffffff");
+				break;
+				
+			case BACKGROUND:
+				color = Color.decode("0xffffff");
+				break;
+				
+			case TEXT:
+				color = Color.decode("0x262626");
+//				color = Color.decode("0x4c4c4c");
+				break;
+				
+			case textVIEW:
+				color = Color.decode("0xffffff");
+				break;
+				
+			case buttonPRESSED:
+				color = Color.decode("0xf3f3f3");
+				break;
+	
+			default:
+				color = Color.white;
+				break;
+		}
+		
+		return color;
+	}
+	
+	/* * * * DARK THEME * * * */
+	public Color getDarkColor(ColorType type){
 		Color color;
 		switch (type) {
 			case calculateBUTTON:
