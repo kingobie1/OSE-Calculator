@@ -21,7 +21,7 @@ public class ColorManager {
 				break;
 				
 			case numberBUTTON:
-				color = Color.decode("0x232323");
+				color = Color.decode("0x2b2b2b");
 				break;
 				
 			case operationBUTTON:

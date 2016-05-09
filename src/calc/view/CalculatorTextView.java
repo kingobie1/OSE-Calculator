@@ -44,7 +44,7 @@ public class CalculatorTextView extends JPanel {
 		lblText.setForeground(colorManager.getColor(ColorType.TEXT));
 
 		lblText.setHorizontalAlignment(SwingConstants.RIGHT);
-		lblText.setFont(new Font(Font.MONOSPACED, Font.PLAIN, 20));
+		lblText.setFont(new Font(Font.MONOSPACED, Font.PLAIN, 24));
 		GroupLayout groupLayout = new GroupLayout(this);
 		groupLayout.setHorizontalGroup(
 			groupLayout.createParallelGroup(Alignment.LEADING)
