@@ -12,6 +12,7 @@ import calc.view.CalculatorTextView;
  *
  */
 public class CalcManager {
+	boolean isValid = false;
 	
 	boolean isPostCalculation = false; // check if the state is pre or post calculation.
 	double firstValue; // the first value in the calculation.
@@ -131,7 +132,19 @@ public class CalcManager {
 	/**
 	 * tell the manager that a calculation has been from the calculate button.
 	 */
-	public void postCalculation(){
+	public void postCalculation() {
 		isPostCalculation = true;
+	}
+	
+	/**
+	 * Checks if button calculate or button operation press is valid or not.
+	 * @return isValid - the validity of a 'calc' or 'operation' button press.
+	 */
+	public boolean isValid() {
+		if (calculatorTextView.getText().equals("")) {
+			return false;
+		} else {
+			return true;
+		}
 	}
 }
