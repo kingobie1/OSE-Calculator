@@ -6,6 +6,7 @@ import javax.swing.GroupLayout.Alignment;
 
 import javax.swing.JTextField;
 
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
 import javax.swing.LayoutStyle.ComponentPlacement;
@@ -14,6 +15,8 @@ import calc.controller.ControllerButtonCalculate;
 import calc.controller.ControllerButtonClear;
 import calc.controller.ControllerButtonOperation;
 import calc.controller.ControllerNumButton;
+import calc.model.ColorManager;
+import calc.model.ColorType;
 import calc.model.OperationType;
 
 import javax.swing.SwingConstants;
@@ -24,11 +27,13 @@ import javax.swing.SwingConstants;
  *
  */
 public class CalcScreen extends JPanel {
+	ColorManager colorManager = ColorManager.getInstance();
 
 	/**
 	 * Create the panel.
 	 */
 	public CalcScreen() {
+		setBackground(colorManager.getColor(ColorType.BACKGROUND));
 		setBounds(0, 0, 237, 373);
 		
 		// initialize number buttons.
@@ -70,6 +75,9 @@ public class CalcScreen extends JPanel {
 		calcButtonBracR.setEnabled(false);
 		CalcButton calcButtonPercentage = new CalcButton("%");
 		calcButtonPercentage.setEnabled(false);
+		
+		// set calculate button color.
+		calculateButton.setBackground(colorManager.getColor(ColorType.calculateBUTTON));
 
 		// add controllers to non number buttons.
 		calculateButton.addActionListener(new ControllerButtonCalculate());

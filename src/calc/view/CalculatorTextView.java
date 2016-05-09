@@ -6,6 +6,11 @@ import java.awt.Dimension;
 import javax.swing.BorderFactory;
 import javax.swing.JPanel;
 import javax.swing.border.Border;
+import javax.swing.border.EmptyBorder;
+
+import calc.model.ColorManager;
+import calc.model.ColorType;
+
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.JTextField;
@@ -19,6 +24,7 @@ import javax.swing.JLabel;
  *
  */
 public class CalculatorTextView extends JPanel {
+	ColorManager colorManager = ColorManager.getInstance();
 	private static CalculatorTextView instance = new CalculatorTextView();
 	JLabel lblText;
 	boolean newVal;
@@ -27,14 +33,15 @@ public class CalculatorTextView extends JPanel {
 	 * Create the panel.
 	 */
 	private CalculatorTextView() {
-		setBackground(Color.white);
-		setBorder(BorderFactory.createLineBorder(Color.gray));
+		setBackground(colorManager.getColor(ColorType.textVIEW));
+		setBorder(getBorder());
 		// Currently Does nothing.
 		Dimension maximumSize = new Dimension(218, 55);
 		setMaximumSize(maximumSize);
 		setBounds(0, 0, 218, 55);
 		
 		lblText = new JLabel("");
+		lblText.setForeground(colorManager.getColor(ColorType.TEXT));
 
 		lblText.setHorizontalAlignment(SwingConstants.RIGHT);
 		lblText.setFont(new Font(Font.MONOSPACED, Font.PLAIN, 20));
