@@ -51,7 +51,7 @@ public class testCalculations extends TestCase {
 		calcButtonAddition = new CalcButton("+");
 		calcButtonClear = new CalcButton("ac");
 		
-		calculateButton.addActionListener(addController);
+		calculateButton.addActionListener(calculateController);
 		calcButtonDivision.addActionListener(divisionController);
 		calcButtonMultiplication.addActionListener(multiplyController);
 		calcButtonSubtraction.addActionListener(subtractionController);
@@ -179,7 +179,7 @@ public class testCalculations extends TestCase {
 		assertEquals(6.1, calcText.getDouble());
 	}
 	
-	public void testSequenceOfCalculations(){
+	public void testCalculationOnCalculation(){
 		startUp();
 		
 		oneButton.doClick();
@@ -201,7 +201,39 @@ public class testCalculations extends TestCase {
 		calculateButton.doClick();
 		
 		// 34.2 * 3 = 102.6 
-		assertEquals(102.6, calcText.getDouble());
+		assertEquals(102.6, calcText.getDouble());	
+	}
+	
+	public void testSequenceOfCalculations(){
+		startUp();
+		
+		oneButton.doClick();
+		twoButton.doClick();
+		decimalButton.doClick();
+		twoButton.doClick();
+		
+		calcButtonAddition.doClick();
+		
+		twoButton.doClick();
+		twoButton.doClick();
+
+		// 12.2 + 22 = 34.2
+		
+		calcButtonDivision.doClick();
+		
+		twoButton.doClick();
+		
+		//  34.2 / 2 = 17.1
+		
+		calcButtonSubtraction.doClick();
+		
+		threeButton.doClick();
+		
+		calculateButton.doClick();
+		
+		// 17.1 - 3 = 14.1
+		assertEquals(14.1, calcText.getDouble());
+		
 		
 	}
 

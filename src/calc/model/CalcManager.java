@@ -1,5 +1,7 @@
 package calc.model;
 
+import java.text.DecimalFormat;
+
 import calc.view.CalculatorTextView;
 
 public class CalcManager {
@@ -30,6 +32,7 @@ public class CalcManager {
 	}
 	
 	public double calculate(OperationType type){
+		DecimalFormat dFormat = new DecimalFormat("#.#######");
 		double secondValue = calculatorTextView.getDouble();
 		double total;
 		
@@ -59,7 +62,8 @@ public class CalcManager {
 		
 		isPostCalculation = false;
 		calculatorTextView.resetText();
-		calculatorTextView.addText(total + "");
+		
+		calculatorTextView.addText(dFormat.format(total));
 		firstValue = total;
 		return total;	
 	}
