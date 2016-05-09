@@ -43,17 +43,19 @@ public class CalcScreen extends JPanel {
 		NumButton numButton7 = new NumButton("7");
 		NumButton numButton8 = new NumButton("8");
 		NumButton numButton9 = new NumButton("9");
+		NumButton numButtonDecimal = new NumButton(".");
 		
-		numButton0.addActionListener(new ControllerNumButton(0));
-		numButton1.addActionListener(new ControllerNumButton(1));
-		numButton2.addActionListener(new ControllerNumButton(2));
-		numButton3.addActionListener(new ControllerNumButton(3));
-		numButton4.addActionListener(new ControllerNumButton(4));
-		numButton5.addActionListener(new ControllerNumButton(5));
-		numButton6.addActionListener(new ControllerNumButton(6));
-		numButton7.addActionListener(new ControllerNumButton(7));
-		numButton8.addActionListener(new ControllerNumButton(8));
-		numButton9.addActionListener(new ControllerNumButton(9));
+		numButton0.addActionListener(new ControllerNumButton("0"));
+		numButton1.addActionListener(new ControllerNumButton("1"));
+		numButton2.addActionListener(new ControllerNumButton("2"));
+		numButton3.addActionListener(new ControllerNumButton("3"));
+		numButton4.addActionListener(new ControllerNumButton("4"));
+		numButton5.addActionListener(new ControllerNumButton("5"));
+		numButton6.addActionListener(new ControllerNumButton("6"));
+		numButton7.addActionListener(new ControllerNumButton("7"));
+		numButton8.addActionListener(new ControllerNumButton("8"));
+		numButton9.addActionListener(new ControllerNumButton("9"));
+		numButtonDecimal.addActionListener(new ControllerNumButton("."));
 		
 
 		CalcButton calculateButton = new CalcButton("=");
@@ -63,8 +65,11 @@ public class CalcScreen extends JPanel {
 		CalcButton calcButtonAddition = new CalcButton("+");
 		CalcButton calcButtonClear = new CalcButton("ac");
 		CalcButton calcButtonBrackL = new CalcButton("(");
+		calcButtonBrackL.setEnabled(false);
 		CalcButton calcButtonBracR = new CalcButton(")");
+		calcButtonBracR.setEnabled(false);
 		CalcButton calcButtonPercentage = new CalcButton("%");
+		calcButtonPercentage.setEnabled(false);
 
 		calculateButton.addActionListener(new ControllerButtonCalculate());
 		calcButtonAddition.addActionListener(new ControllerButtonOperation(OperationType.ADDITION));
@@ -74,11 +79,12 @@ public class CalcScreen extends JPanel {
 		
 		calcButtonClear.addActionListener(new ControllerButtonClear());
 		CalculatorTextView calculatorTextView = CalculatorTextView.getInstance();
+//		JPanel calculatorTextView = new JPanel();
 		
 		GroupLayout groupLayout = new GroupLayout(this);
 		groupLayout.setHorizontalGroup(
-			groupLayout.createParallelGroup(Alignment.TRAILING)
-				.addGroup(Alignment.LEADING, groupLayout.createSequentialGroup()
+			groupLayout.createParallelGroup(Alignment.LEADING)
+				.addGroup(groupLayout.createSequentialGroup()
 					.addGap(9)
 					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING, false)
 						.addGroup(groupLayout.createSequentialGroup()
@@ -95,7 +101,10 @@ public class CalcScreen extends JPanel {
 									.addComponent(numButton1, GroupLayout.PREFERRED_SIZE, 50, GroupLayout.PREFERRED_SIZE)
 									.addPreferredGap(ComponentPlacement.RELATED)
 									.addComponent(numButton2, GroupLayout.PREFERRED_SIZE, 50, GroupLayout.PREFERRED_SIZE))
-								.addComponent(numButton0, GroupLayout.PREFERRED_SIZE, 50, GroupLayout.PREFERRED_SIZE))
+								.addGroup(groupLayout.createSequentialGroup()
+									.addComponent(numButton0, GroupLayout.PREFERRED_SIZE, 50, GroupLayout.PREFERRED_SIZE)
+									.addPreferredGap(ComponentPlacement.RELATED)
+									.addComponent(numButtonDecimal, GroupLayout.PREFERRED_SIZE, 50, GroupLayout.PREFERRED_SIZE)))
 							.addPreferredGap(ComponentPlacement.RELATED)
 							.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
 								.addGroup(groupLayout.createSequentialGroup()
@@ -161,7 +170,8 @@ public class CalcScreen extends JPanel {
 					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
 						.addComponent(calcButtonAddition, GroupLayout.PREFERRED_SIZE, 50, GroupLayout.PREFERRED_SIZE)
 						.addComponent(numButton0, GroupLayout.PREFERRED_SIZE, 50, GroupLayout.PREFERRED_SIZE)
-						.addComponent(calculateButton, GroupLayout.PREFERRED_SIZE, 50, GroupLayout.PREFERRED_SIZE))
+						.addComponent(calculateButton, GroupLayout.PREFERRED_SIZE, 50, GroupLayout.PREFERRED_SIZE)
+						.addComponent(numButtonDecimal, GroupLayout.PREFERRED_SIZE, 50, GroupLayout.PREFERRED_SIZE))
 					.addContainerGap(14, Short.MAX_VALUE))
 		);
 		setLayout(groupLayout);
