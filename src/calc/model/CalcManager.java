@@ -2,6 +2,7 @@ package calc.model;
 
 import java.text.DecimalFormat;
 
+import calc.util.OperationType;
 import calc.view.CalculatorTextView;
 
 /**

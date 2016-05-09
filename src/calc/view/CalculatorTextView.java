@@ -3,12 +3,12 @@ package calc.view;
 import java.awt.Dimension;
 
 import javax.swing.JPanel;
-
-import calc.model.ColorManager;
-import calc.model.ColorType;
-
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
+
+import calc.util.ColorManager;
+import calc.util.ColorType;
+
 import java.awt.Font;
 import javax.swing.SwingConstants;
 import javax.swing.JLabel;

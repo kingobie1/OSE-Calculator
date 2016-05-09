@@ -1,4 +1,4 @@
-package calc.model;
+package calc.util;
 
 /**
  * the types of operations that can be made.
