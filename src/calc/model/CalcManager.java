@@ -141,7 +141,6 @@ public class CalcManager {
 	 * @return isValid - the validity of a 'calc' or 'operation' button press.
 	 */
 	public boolean isValid() {
-		
 		if (calculatorTextView.getText().equals("")) {
 			return false;
 		} else {

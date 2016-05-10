@@ -3,6 +3,7 @@ package calc.view;
 import java.awt.Dimension;
 
 import javax.swing.JPanel;
+import javax.security.auth.Refreshable;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 
@@ -23,6 +24,7 @@ public class CalculatorTextView extends JPanel {
 	private static CalculatorTextView instance = new CalculatorTextView();
 	JLabel lblText;
 	boolean newVal;
+	CalcButton clearButton;
 	
 	/**
 	 * Create the panel.
@@ -80,18 +82,28 @@ public class CalculatorTextView extends JPanel {
 	}
 	
 	public void resetText() {
+		lblText.setText("0");
+	}
+	
+	public void hardReset() {
 		lblText.setText("");
 	}
 	
 	public void addText(String s){
+		
 		if (newVal == true) {
 			this.resetText();
 		}
+		
+		if (this.getText().equals("0")){
+			this.hardReset();
+		} 
 		
 		String tempString = lblText.getText();
 		tempString = tempString.concat(s);
 		lblText.setText(tempString);
 		
+		refreshClearButton();
 		newVal = false;
 	}
 
@@ -103,5 +115,20 @@ public class CalculatorTextView extends JPanel {
 		this.revalidate();
 		setBackground(colorManager.getColor(ColorType.textVIEW));
 		lblText.setForeground(colorManager.getColor(ColorType.textVIEWtext));
+		this.refreshClearButton();
+	}
+	
+	public void giveClearButton(CalcButton button) {
+		this.clearButton = button;
+	}
+	
+	public void refreshClearButton(){
+		if (this.getText().equals("0") || this.getText().equals("")){
+			clearButton.setText("AC");
+			clearButton.revalidate();
+		} else {
+			clearButton.setText("C");
+			clearButton.revalidate();
+		}
 	}
 }
