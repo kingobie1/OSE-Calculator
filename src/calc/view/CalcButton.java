@@ -43,6 +43,7 @@ public class CalcButton extends JButton {
 		}
 		
 		g.fillRect(0, 0, getWidth(), getHeight());
+//		g.fillOval(6, 6, 40, 40);
 		super.paintComponent(g);
 	}
 	

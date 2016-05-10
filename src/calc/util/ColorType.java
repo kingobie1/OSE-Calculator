@@ -6,5 +6,5 @@ package calc.util;
  *
  */
 public enum ColorType {
-	calculateBUTTON, numberBUTTON, operationBUTTON, BACKGROUND, TEXT, textVIEW, buttonPRESSED
+	calculateBUTTON, numberBUTTON, operationBUTTON, BACKGROUND, TEXT, textVIEW, buttonPRESSED, textVIEWtext
 }

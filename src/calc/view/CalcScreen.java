@@ -90,7 +90,6 @@ public class CalcScreen extends JPanel {
 				.addGroup(groupLayout.createSequentialGroup()
 					.addGap(5)
 					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-						.addComponent(calculatorTextView, Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, 224, Short.MAX_VALUE)
 						.addGroup(groupLayout.createSequentialGroup()
 							.addGroup(groupLayout.createParallelGroup(Alignment.TRAILING)
 								.addComponent(numButton1, GroupLayout.PREFERRED_SIZE, 53, GroupLayout.PREFERRED_SIZE)
@@ -131,7 +130,8 @@ public class CalcScreen extends JPanel {
 								.addComponent(calcButtonDivision, GroupLayout.PREFERRED_SIZE, 53, GroupLayout.PREFERRED_SIZE)
 								.addComponent(calcButtonMultiplication, GroupLayout.PREFERRED_SIZE, 53, GroupLayout.PREFERRED_SIZE)
 								.addComponent(calcButtonSubtraction, GroupLayout.PREFERRED_SIZE, 53, GroupLayout.PREFERRED_SIZE))))
-					.addContainerGap())
+					.addGap(1))
+				.addComponent(calculatorTextView, GroupLayout.DEFAULT_SIZE, 230, Short.MAX_VALUE)
 		);
 		groupLayout.setVerticalGroup(
 			groupLayout.createParallelGroup(Alignment.LEADING)
