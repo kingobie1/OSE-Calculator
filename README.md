@@ -9,4 +9,4 @@ In order to run the file, open it up in Eclipse and run `Main.java` as a Java Ap
 ## Controls
 To change the color theme of the app type, ⌘+T.
 
-![](http://i305.photobucket.com/albums/nn238/kingobie1/Calculator/calculator%20scheme%20switch.gif)
+![](http://i305.photobucket.com/albums/nn238/kingobie1/Calculator/calculator%20scheme%20switch_1.gif)
