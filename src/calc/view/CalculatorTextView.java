@@ -36,7 +36,7 @@ public class CalculatorTextView extends JPanel {
 		setBounds(0, 0, 218, 55);
 		
 		lblText = new JLabel("");
-		lblText.setForeground(colorManager.getColor(ColorType.TEXT));
+		lblText.setForeground(colorManager.getColor(ColorType.textVIEWtext));
 
 		lblText.setHorizontalAlignment(SwingConstants.RIGHT);
 		lblText.setFont(new Font(Font.MONOSPACED, Font.PLAIN, 24));
@@ -102,6 +102,6 @@ public class CalculatorTextView extends JPanel {
 	public void refresh(){
 		this.revalidate();
 		setBackground(colorManager.getColor(ColorType.textVIEW));
-		lblText.setForeground(colorManager.getColor(ColorType.TEXT));
+		lblText.setForeground(colorManager.getColor(ColorType.textVIEWtext));
 	}
 }

@@ -1,5 +1,5 @@
 package calc.util;
 
 public enum ColorMode {
-	DARK, LIGHT
+	DARK, LIGHT, PALE
 }

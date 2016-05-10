@@ -16,6 +16,7 @@ import calc.util.ColorType;
  */
 public class CalcButton extends JButton {
 	ColorManager colorManager = ColorManager.getInstance();
+	boolean isCalculateButton;
 	
 	public CalcButton(String text) {
 		super.setContentAreaFilled(false);
@@ -27,7 +28,13 @@ public class CalcButton extends JButton {
 	
 	@Override
 	protected void paintComponent(Graphics g) {
-		Color color = colorManager.getColor(ColorType.operationBUTTON);
+		Color color;
+		if (isCalculateButton) {
+			color = colorManager.getColor(ColorType.calculateBUTTON);
+		} else {
+			color = colorManager.getColor(ColorType.operationBUTTON);
+		}
+		
 		g.setColor(color);
 		
 		if (getModel().isPressed()) {
@@ -36,6 +43,11 @@ public class CalcButton extends JButton {
 		}
 		
 		g.fillRect(0, 0, getWidth(), getHeight());
+//		g.fillOval(6, 6, 40, 40);
 		super.paintComponent(g);
+	}
+	
+	public void isCalculateButton() {
+		isCalculateButton = true;
 	}
 }

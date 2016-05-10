@@ -9,7 +9,7 @@ import java.awt.Color;
  */
 public class ColorManager {
 	private static ColorManager instance = new ColorManager();
-	ColorMode theme = ColorMode.LIGHT;
+	ColorMode theme = ColorMode.DARK;
 	
 	private ColorManager() {
 		
@@ -30,6 +30,10 @@ public class ColorManager {
 			case DARK:
 				color = getDarkColor(type);
 				break;	
+				
+			case PALE:
+				color = getPaleColor(type);
+				break;
 	
 			default:
 				color = getDarkColor(type);
@@ -44,7 +48,7 @@ public class ColorManager {
 		Color color;
 		switch (type) {
 			case calculateBUTTON:
-				color = Color.decode("0x8f2f29");
+				color = Color.decode("0xcadee1");
 				break;
 				
 			case numberBUTTON:
@@ -63,6 +67,10 @@ public class ColorManager {
 				color = Color.decode("0x262626");
 				break;
 				
+			case textVIEWtext:
+				color = Color.decode("0xcadee1");
+				break;
+				
 			case textVIEW:
 				color = Color.decode("0xffffff");
 				break;
@@ -79,12 +87,56 @@ public class ColorManager {
 		return color;
 	}
 	
+	/* * * * Pale THEME * * * */
+	public Color getPaleColor(ColorType type){
+		Color color;
+		switch (type) {
+			case calculateBUTTON:
+				color = Color.decode("0xffee94");
+				break;
+				
+			case numberBUTTON:
+				color = Color.decode("0xffffff");
+				break;
+				
+			case operationBUTTON:
+				color = Color.decode("0xffdae7");
+				break;
+				
+			case BACKGROUND:
+				color = Color.decode("0xececec");
+				break;
+				
+			case TEXT:
+				color = Color.decode("0x262626");
+				break;
+				
+			case textVIEWtext:
+				color = Color.decode("0x8d8d8a");
+				break;
+				
+			case textVIEW:
+				color = Color.decode("0xececec");
+				break;
+				
+			case buttonPRESSED:
+				color = Color.decode("0xf5d7d5");
+				break;
+	
+			default:
+				color = Color.white;
+				break;
+		}
+		
+		return color;
+	}
+	
 	/* * * * DARK THEME * * * */
 	public Color getDarkColor(ColorType type){
 		Color color;
 		switch (type) {
 			case calculateBUTTON:
-				color = Color.decode("0x8f2f29");
+				color = Color.decode("0xc0392b");
 				break;
 				
 			case numberBUTTON:
@@ -100,6 +152,10 @@ public class ColorManager {
 				break;
 				
 			case TEXT:
+				color = Color.decode("0xede8ec");
+				break;
+				
+			case textVIEWtext:
 				color = Color.decode("0xede8ec");
 				break;
 				

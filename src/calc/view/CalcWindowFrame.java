@@ -39,7 +39,7 @@ public class CalcWindowFrame extends JFrame {
 		}
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 237, 400);
+		setBounds(100, 100, 230, 397);
 		contentPane = new JPanel();
 		contentPane.setLayout(new BorderLayout(0, 0));
 		setContentPane(contentPane);
@@ -73,7 +73,7 @@ public class CalcWindowFrame extends JFrame {
 	        
 	        	// When `Command` + `t` is pressed, change the theme.
 	        	if (e.getKeyCode() == KeyEvent.VK_T && e.isMetaDown() && e.getID() == KeyEvent.KEY_PRESSED) {
-	                System.out.println("key pressed");
+//	                System.out.println("key pressed");
 	                ColorManager.getInstance().alternateTheme();
 	                CalcWindowFrame.getInstace().swapPanel(new CalcScreen());
 	            }
