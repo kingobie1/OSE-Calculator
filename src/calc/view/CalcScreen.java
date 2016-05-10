@@ -9,6 +9,7 @@ import javax.swing.LayoutStyle.ComponentPlacement;
 
 import calc.controller.ControllerButtonCalculate;
 import calc.controller.ControllerButtonClear;
+import calc.controller.ControllerButtonNegativePositive;
 import calc.controller.ControllerButtonOperation;
 import calc.controller.ControllerNumButton;
 import calc.util.ColorManager;
@@ -68,13 +69,13 @@ public class CalcScreen extends JPanel {
 		CalcButton calcButtonSubtraction = new CalcButton("-");
 		CalcButton calcButtonAddition = new CalcButton("+");
 		calcButtonClear = new CalcButton("AC");
-		CalcButton calcButtonBrackL = new CalcButton("(");
-		calcButtonBrackL.setEnabled(false);
+		CalcButton calcButtonNegative = new CalcButton("+-");
 		CalcButton calcButtonBracR = new CalcButton(")");
 		calcButtonBracR.setEnabled(false);
 
 		// add controllers to non number buttons.
 		calculateButton.addActionListener(new ControllerButtonCalculate());
+		calcButtonNegative.addActionListener(new ControllerButtonNegativePositive());
 		calcButtonAddition.addActionListener(new ControllerButtonOperation(OperationType.ADDITION));
 		calcButtonSubtraction.addActionListener(new ControllerButtonOperation(OperationType.SUBTRACTION));
 		calcButtonMultiplication.addActionListener(new ControllerButtonOperation(OperationType.MULTIPLICATION));
@@ -122,7 +123,7 @@ public class CalcScreen extends JPanel {
 										.addComponent(calcButtonClear, GroupLayout.PREFERRED_SIZE, 53, GroupLayout.PREFERRED_SIZE))
 									.addGap(3)
 									.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-										.addComponent(calcButtonBrackL, GroupLayout.PREFERRED_SIZE, 53, GroupLayout.PREFERRED_SIZE)
+										.addComponent(calcButtonNegative, GroupLayout.PREFERRED_SIZE, 53, GroupLayout.PREFERRED_SIZE)
 										.addComponent(numButton8, GroupLayout.PREFERRED_SIZE, 53, GroupLayout.PREFERRED_SIZE))
 									.addGap(3)
 									.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
@@ -147,7 +148,7 @@ public class CalcScreen extends JPanel {
 							.addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
 								.addComponent(calcButtonClear, GroupLayout.PREFERRED_SIZE, 53, GroupLayout.PREFERRED_SIZE)
 								.addComponent(calcButtonDivision, GroupLayout.PREFERRED_SIZE, 53, GroupLayout.PREFERRED_SIZE)
-								.addComponent(calcButtonBrackL, GroupLayout.PREFERRED_SIZE, 53, GroupLayout.PREFERRED_SIZE)
+								.addComponent(calcButtonNegative, GroupLayout.PREFERRED_SIZE, 53, GroupLayout.PREFERRED_SIZE)
 								.addComponent(calcButtonBracR, GroupLayout.PREFERRED_SIZE, 53, GroupLayout.PREFERRED_SIZE))
 							.addGap(3)
 							.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)

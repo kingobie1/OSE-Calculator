@@ -34,7 +34,7 @@ public class ControllerButtonOperation implements ActionListener {
 			calcManager.setOperationType(type);
 			calcManager.setFistValue();
 			calcManager.incrementCount();
-			calculatorTextView.resetText();
+			calculatorTextView.hardReset();
 			calculatorTextView.newValue();
 		} else if (calcManager.getOperationCount() == 1) {
 			calcManager.calculate(calcManager.getOperationType());
