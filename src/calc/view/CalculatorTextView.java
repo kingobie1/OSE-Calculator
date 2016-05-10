@@ -168,4 +168,18 @@ public class CalculatorTextView extends JPanel {
 			clearButton.revalidate();
 		}
 	}
+
+	public void negPosSwitch() {
+		if (lblText.getText().equals("")) { return; }
+		String tempString = lblText.getText();
+		
+		if (tempString.substring(0, 1).equals("-")) { // if negative.
+			// set positive.
+			lblText.setText(tempString.substring(1));
+		} else { // if positive.
+			// set negative.
+			System.out.println(lblText.getText().substring(0, 1));
+			lblText.setText("-" + tempString);
+		}
+	}
 }

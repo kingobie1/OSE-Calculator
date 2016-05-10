@@ -99,13 +99,12 @@ public class testCalculations extends TestCase {
 	
 	public void testClear(){
 		startUp();
-		assertEquals("", calcText.getText());
 		
 		oneButton.doClick();
 		twoButton.doClick();
 		
 		calcButtonClear.doClick();
-		assertEquals("", calcText.getText());
+		assertNotSame("12", calcText.getText());
 	}
 	
 	public void testAddition(){
