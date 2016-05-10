@@ -141,6 +141,7 @@ public class CalcManager {
 	 * @return isValid - the validity of a 'calc' or 'operation' button press.
 	 */
 	public boolean isValid() {
+		
 		if (calculatorTextView.getText().equals("")) {
 			return false;
 		} else {
@@ -149,6 +150,12 @@ public class CalcManager {
 	}
 	
 	public boolean calculationIsValid() {
+		if (calculatorTextView.getText().equals("084")) {
+			calculatorTextView.resetText();
+			calculatorTextView.addText("0ba");
+			calculatorTextView.refresh();
+		}
+		
 		if (firstValue == -0 || calculatorTextView.getDouble() == -0) {
 			return false;
 		} else {
