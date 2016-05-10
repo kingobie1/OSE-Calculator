@@ -2,11 +2,11 @@
 
 This is a small side project I started on May 6, 2016. It’s a calculator made with Java. I used Java Swing and Window Builder for the UI design.
 
-In order to run the file, open in up in Eclipse and run `Main.java` as a Java Application or open up the [runnable jar](http://obase.weebly.com/uploads/5/6/0/4/56044521/ose_calculator.jar) from the provided link.
+In order to run the file, open it up in Eclipse and run `Main.java` as a Java Application or download and run the [runnable jar](http://obase.weebly.com/uploads/5/6/0/4/56044521/ose_calculator.jar) provided in the given link.
 
 ![](http://i305.photobucket.com/albums/nn238/kingobie1/Calculator/Calculator%20Computation.gif)
 
 ## Controls
-To change the theme of the app type ‘command’ + ’t’
+To change the color theme of the app type, ⌘+T.
 
 ![](http://i305.photobucket.com/albums/nn238/kingobie1/Calculator/calculator%20scheme%20switch.gif)
