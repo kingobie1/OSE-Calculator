@@ -1,6 +1,7 @@
 package calc.view;
 
 import javax.swing.JPanel;
+import javax.security.auth.Refreshable;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 
@@ -24,6 +25,7 @@ import javax.swing.JLabel;
 public class CalcScreen extends JPanel {
 	ColorManager colorManager = ColorManager.getInstance();
 	public static final int BUTTONSIZE = 53;
+	CalcButton calcButtonClear;
 
 	/**
 	 * Create the panel.
@@ -65,7 +67,7 @@ public class CalcScreen extends JPanel {
 		CalcButton calcButtonMultiplication = new CalcButton("x");
 		CalcButton calcButtonSubtraction = new CalcButton("-");
 		CalcButton calcButtonAddition = new CalcButton("+");
-		CalcButton calcButtonClear = new CalcButton("AC");
+		calcButtonClear = new CalcButton("AC");
 		CalcButton calcButtonBrackL = new CalcButton("(");
 		calcButtonBrackL.setEnabled(false);
 		CalcButton calcButtonBracR = new CalcButton(")");
@@ -81,6 +83,7 @@ public class CalcScreen extends JPanel {
 		
 //		 screen that views the calculation numbers.
 		CalculatorTextView calculatorTextView = CalculatorTextView.getInstance();
+		calculatorTextView.giveClearButton(calcButtonClear);
 		calculatorTextView.refresh();
 //		JPanel calculatorTextView = new JPanel(); // used when moving things in window builder.
 		
@@ -176,5 +179,20 @@ public class CalcScreen extends JPanel {
 					.addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
 		);
 		setLayout(groupLayout);
+	}
+	
+	/**
+	 * Hard = true
+	 * Soft = false
+	 * @param b
+	 */
+	public void changeClear(boolean isHardClear){
+		if (isHardClear) {
+			calcButtonClear.setText("AC");
+		} else {
+			calcButtonClear.setText("C");
+		}
+		
+		calcButtonClear.revalidate();
 	}
 }

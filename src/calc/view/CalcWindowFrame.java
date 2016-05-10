@@ -80,6 +80,5 @@ public class CalcWindowFrame extends JFrame {
 	        		
 	            return false;
 	        }
-	    }
-
+	 }
 }

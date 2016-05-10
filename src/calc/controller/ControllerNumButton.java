@@ -24,6 +24,7 @@ public class ControllerNumButton implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		SoundManager.getInstance().playSound(SoundType.BUTTONSOUND);
 		calculatorTextView.addText(num);
+		calculatorTextView.refreshClearButton();
 	}
 
 }
