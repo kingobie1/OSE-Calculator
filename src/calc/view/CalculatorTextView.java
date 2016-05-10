@@ -56,14 +56,26 @@ public class CalculatorTextView extends JPanel {
 		setLayout(groupLayout);
 	}
 	
+	/**
+	 * get the instance of the CalculatorTextView.
+	 * @return
+	 */
 	public static CalculatorTextView getInstance() {
 		return instance;
 	}
 	
+	/**
+	 * get the text represented on the screen.
+	 * @return
+	 */
 	public String getText() {
 		return lblText.getText();
 	}
 	
+	/**
+	 * get the double value from the string.
+	 * @return
+	 */
 	public double getDouble() {
 //		if (lblText.getText() == null || lblText.getText() == "") { return -0; }
 //		return Double.parseDouble(lblText.getText());
@@ -81,23 +93,32 @@ public class CalculatorTextView extends JPanel {
 		return d;
 	}
 	
+	/**
+	 * set the text to 0.
+	 */
 	public void resetText() {
 		lblText.setText("0");
 	}
 	
+	/** 
+	 * set the screen blank.
+	 */
 	public void hardReset() {
 		lblText.setText("");
 	}
 	
+	/**
+	 * add a number to the screen.
+	 * @param s
+	 */
 	public void addText(String s){
-		
 		if (newVal == true) {
 			this.resetText();
 		}
 		
 		if (this.getText().equals("0")){
 			this.hardReset();
-		} 
+		}
 		
 		String tempString = lblText.getText();
 		tempString = tempString.concat(s);
@@ -107,10 +128,16 @@ public class CalculatorTextView extends JPanel {
 		newVal = false;
 	}
 
+	/**
+	 * new value on the screen.
+	 */
 	public void newValue() {
 		newVal = true;
 	}
 	
+	/**
+	 * refresh text view screen.
+	 */
 	public void refresh(){
 		this.revalidate();
 		setBackground(colorManager.getColor(ColorType.textVIEW));
@@ -118,11 +145,21 @@ public class CalculatorTextView extends JPanel {
 		this.refreshClearButton();
 	}
 	
+	/**
+	 * get the clear button so that you can switch from 'C' to 'AC'
+	 * :( I know bad code :(
+	 * @param button
+	 */
 	public void giveClearButton(CalcButton button) {
 		this.clearButton = button;
 	}
 	
+	/**
+	 * switch clear button on CalcScreen between AC and C
+	 */
 	public void refreshClearButton(){
+		if (clearButton == null) { return; }
+		
 		if (this.getText().equals("0") || this.getText().equals("")){
 			clearButton.setText("AC");
 			clearButton.revalidate();
