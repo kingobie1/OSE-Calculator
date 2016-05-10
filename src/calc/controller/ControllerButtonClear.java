@@ -23,7 +23,7 @@ public class ControllerButtonClear implements ActionListener{
 	public void actionPerformed(ActionEvent e) {
 		SoundManager.getInstance().playSound(SoundType.BUTTONSOUND);
 		
-		if (calculatorTextView.getText().equals("0")) {
+		if (calculatorTextView.getText().equals("0") || calculatorTextView.getText().equals("")) {
 			// Clear text and manager
 			calculatorTextView.hardReset();
 			calcManager.reset();
